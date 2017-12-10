@@ -1,6 +1,8 @@
 #include <iostream>
+#include "SortTestHelper.h"
 
 using namespace std;
+
 
 template<typename T>
 void selectionSort(T arr[], int n) {
@@ -30,7 +32,8 @@ void print(int arr[], int n) {
 int main() {
 //    std::cout << "Hello, World!" << std::endl;
 
-    int arr[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+    int arr[10] = SortTestHelper.generateRandomArray(10, 1, 10);
+
     selectionSort(arr, 10);
     print(arr, 10);
 
